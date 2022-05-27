@@ -1,10 +1,3 @@
-# Console
-PS1="\n\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\n\[\033[35m\]\t\[\033[m\] $ "
-
-# fuzzy search
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-# enhanced bash
 alias c='clear'
 alias du="ncdu -rr -x --exclude .git --exclude node_modules"
 alias top='htop'
@@ -13,9 +6,6 @@ alias irgrep='grep -ir'
 # alias ping='prettyping --nolegend'
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 
-# C++
-alias cling='cling -std=c++17 -l ~/.cling_init.cc'
-
 # Docker
 alias dockerm='docker rm -v $(docker ps -aq -f status=exited)'
 alias dockermc='docker rm $(docker ps -aq)'
@@ -23,8 +13,3 @@ alias dockermi='docker rmi $(docker images -q)'
 alias dockermv='docker volume ls -qf dangling=true | xargs -r docker volume rm'
 alias dangling='docker images -qf dangling=true | xargs docker rmi'
 
-# Load modules
-# . /usr/share/modules/init/bash
-
-# Path
-PATH="$PATH:$HOME/.cargo/bin:$HOME/.local/bin:$HOME/Primer/cling-build/builddir/bin"
