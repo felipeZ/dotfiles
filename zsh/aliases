@@ -7,6 +7,8 @@ alias irgrep='grep -ir'
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 
 # Docker
+alias dps='docker ps'
+alias doit='docker exec -it'
 alias dockerm='docker rm -v $(docker ps -aq -f status=exited)'
 alias dockermc='docker rm $(docker ps -aq)'
 alias dockermi='docker rmi $(docker images -q)'
